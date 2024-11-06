@@ -76,7 +76,6 @@ WSGI_APPLICATION = 'TaskManager.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -87,8 +86,8 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-"""
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -99,7 +98,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+'''
 
 
 # Password validation
@@ -149,3 +148,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'login'
+
+LOGOUT_REDIRECT_URL = '/login/'

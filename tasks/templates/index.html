@@ -27,10 +27,7 @@
                     <div> <strong> Due date: </strong> {{ task.due_date }} </div>
                     <div class="task-card-options">
                         <a class="btn btn-primary" href="{% url 'edit_task' task.id %}">Edit</a>
-                        <form action="{% url 'delete_task' task.id %}" method="post" style="display:inline;">
-                            {% csrf_token %}
-                            <input class="submit-button" type="submit" value="Delete">
-                        </form>
+                        <a class="btn btn-danger" href="{% url 'delete_task' task.id %}?confirm=true">Delete</a>                    
                     </div>
                 </div>
             </div>

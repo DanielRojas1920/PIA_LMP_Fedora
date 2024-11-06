@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/stylesform.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <title>Log in</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Log in</h1>
+        </div>
+        <form method="post" action="{% url 'login' %}" id="login-form">{% csrf_token %}
+            <div class="form-row">
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" id="id_username" autofocus required>
+            </div>
+            <div class="form-row">
+                <label for="id_password">Password:</label>
+                <input type="password" name="password" id="id_password" required>
+            </div>
+            <div class="form-row">
+                <label>Account Type:</label><br>
+                <input type="radio" id="staff" name="account_type" value="staff" onclick="updateActionURL()" checked>
+                <label for="staff">Staff</label><br>
+                <input type="radio" id="non_staff" name="account_type" value="non_staff" onclick="updateActionURL()">
+                <label for="non_staff">Non-staff</label>
+            </div>
+            <div class="submit-row">
+                <input type="submit" value="Log in">
+            </div>
+        </form>
+        <a href="{% url 'register' %}">Don't have an account yet? Register</a>
+    </div>
+</body>
+</html>
+
+
+

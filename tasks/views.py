@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from .forms import TaskRegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -38,7 +39,8 @@ def edit_task(request, task_id):
 @login_required
 def delete_task(request, task_id):
     task = get_object_or_404(Task, id=task_id)
-    if request.method == 'POST':
+    if request.method == 'GET' and request.GET.get('confirm') == 'true':
         task.delete()
-        return redirect('index')  # Redirect to home after deletion
-    return render(request, 'delete_task.html', {'task': task})
+        messages.success(request, "Task deleted successfully!")
+        return redirect('index')
+    return redirect(reverse('index'))

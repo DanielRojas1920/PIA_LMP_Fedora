@@ -88,11 +88,32 @@ button:hover {
     text-decoration: none;
     color: black;
     text-align: center;
+    padding: 8px 0;
+    margin: 2px;
 }
 
 .btn.btn-primary:hover {
     background-color: #D6F2C2;   /* Cambia el color de fondo al pasar el ratón */
 }
+
+.btn.btn-danger {
+    display: block;
+    background-color: #dc3545;
+    border: 1px solid black;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.btn.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
 
 .submit-button{
     background-color: white;
