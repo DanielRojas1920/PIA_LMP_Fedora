@@ -76,6 +76,7 @@ WSGI_APPLICATION = 'TaskManager.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -86,19 +87,21 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
 '''
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PIA_LMP',
         'USER': 'PIA_LMP',
-        'PASSWORD': 'ijklmnop582#',
+        'PASSWORD': '9WG\"\"u4:85M',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
-'''
+
 
 
 # Password validation
